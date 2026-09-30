@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WordCare — PDF &amp; Word documents on your phone</title>
+  <meta name="description" content="Read, edit, scan, sign, compress and convert PDFs and Word documents — privately, on your phone, no account needed.">
+  <link rel="icon" href="icon.png">
+  <style>
+    :root {
+      --bg: #FAFAF7; --surface: #FFFFFF; --text: #0B1F4D; --muted: #4A5670;
+      --brand: #0351E7; --border: #E3E6EE;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0E1320; --surface: #171E2F; --text: #EEF1F8; --muted: #A9B3C9;
+        --brand: #5B8CFF; --border: #26304A;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.55;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 56px 16px 40px; }
+    header { display: flex; align-items: center; gap: 16px; }
+    header img { width: 72px; height: 72px; border-radius: 18px; }
+    h1 { font-size: 2.2rem; letter-spacing: -0.02em; }
+    .tagline { font-size: 1.25rem; margin-top: 24px; font-weight: 600; }
+    .lead { color: var(--muted); margin-top: 8px; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn {
+      display: inline-block; padding: 12px 20px; border-radius: 999px;
+      background: var(--brand); color: #fff; text-decoration: none; font-weight: 600;
+    }
+    .soon {
+      display: inline-block; padding: 12px 20px; border-radius: 999px;
+      border: 1px solid var(--border); color: var(--muted);
+    }
+    ul.features {
+      list-style: none; padding: 0; margin-top: 36px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;
+    }
+    ul.features li {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 14px 16px;
+    }
+    ul.features b { display: block; }
+    ul.features span { color: var(--muted); font-size: 0.95rem; }
+    footer {
+      margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 0.9rem;
+    }
+    footer a { color: var(--brand); }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="icon.png" alt="WordCare app icon">
+      <h1>WordCare</h1>
+    </header>
+
+    <p class="tagline">All your PDFs &amp; Word documents, right on your phone.</p>
+    <p class="lead">Read, edit, scan, sign, compress and convert documents — privately, on your device, with no account needed.</p>
+
+    <div class="cta">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.wordcare.app">Get it on Google Play</a>
+      <span class="soon">iPhone version coming soon</span>
+    </div>
+
+    <ul class="features">
+      <li><b>Open &amp; edit</b><span>PDFs and Word files</span></li>
+      <li><b>Scan</b><span>Paper documents to PDF</span></li>
+      <li><b>Sign</b><span>Forms without printing</span></li>
+      <li><b>Compress</b><span>Big files, share-ready</span></li>
+      <li><b>Convert</b><span>PDF &harr; Word</span></li>
+      <li><b>Private</b><span>Files stay on your phone</span></li>
+    </ul>
+
+    <footer>
+      <p>
+        <a href="https://justusnuwagaba.github.io/wordcare-legal/privacy.html">Privacy policy</a> ·
+        <a href="https://justusnuwagaba.github.io/wordcare-legal/terms.html">Terms</a>
+      </p>
+      <p>© 2026 Justus Nuwagaba</p>
+    </footer>
+  </main>
+</body>
+</html>
