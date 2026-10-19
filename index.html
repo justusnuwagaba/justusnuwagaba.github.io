@@ -3,88 +3,383 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WordCare — PDF &amp; Word documents on your phone</title>
-  <meta name="description" content="Read, edit, scan, sign, compress and convert PDFs and Word documents — privately, on your phone, no account needed.">
+  <title>WordCare – Free PDF Editor, Document Scanner &amp; Office App</title>
+  <meta name="description" content="WordCare is a free phone app to scan documents, ID cards and books, sign and edit PDFs, edit Word, Excel and PowerPoint files and write handwritten notes. Works offline, no account needed.">
+  <link rel="canonical" href="https://justusnuwagaba.github.io/">
   <link rel="icon" href="icon.png">
+  <meta name="theme-color" content="#0B1F4D">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WordCare">
+  <meta property="og:title" content="WordCare – Free PDF Editor, Document Scanner &amp; Office App">
+  <meta property="og:description" content="Scan, sign and edit PDFs, Word, Excel and PowerPoint files and write handwritten notes. Free, offline, no account.">
+  <meta property="og:url" content="https://justusnuwagaba.github.io/">
+  <meta property="og:image" content="https://justusnuwagaba.github.io/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "WordCare",
+    "alternateName": "WordCare: PDF, Scan & Docs",
+    "url": "https://justusnuwagaba.github.io/",
+    "image": "https://justusnuwagaba.github.io/icon.png",
+    "description": "Free all-in-one document app: document, ID card and book scanner with text recognition, PDF editor (sign, fill forms, annotate, merge, compress, lock, redact, convert), Word, Excel and PowerPoint editor, and handwritten notebooks. Works offline, no account needed.",
+    "operatingSystem": "Android",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Productivity",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.wordcare.app",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.wordcare.app",
+    "inLanguage": ["en","sw","lg","fr","es","de","it","pt","pl","ro","uk","ru","tr","vi","hi","zh","ja","ko","ar","ur"],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": [
+      "Document scanner with automatic edges and filters",
+      "ID card scanner: front and back on one page",
+      "Book scanner: splits an open book into two pages",
+      "Searchable scans (OCR) and scan to Word",
+      "Sign PDFs and fill in PDF forms",
+      "Annotate PDFs: pen, highlighter, shapes, text",
+      "Merge, split, reorder, rotate and compress PDFs",
+      "Lock PDFs with a password, watermark, page numbers, redact",
+      "Convert PDF to and from Word, Excel, PowerPoint and images",
+      "Edit Word documents, Excel spreadsheets and PowerPoint presentations",
+      "Handwritten notebooks and sticky notes in folders",
+      "Works offline, no account needed, 20 languages"
+    ],
+    "author": { "@type": "Person", "name": "Justus Nuwagaba" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is WordCare free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every feature is free, including merging, compressing, signing and locking PDFs, scanning and editing Office files. The free version shows a small ad; an optional one-time purchase removes it." } },
+      { "@type": "Question", "name": "Do I need an account?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Everything works without signing in. Signing in with Google or Apple is optional and only used for backup to your own Google Drive." } },
+      { "@type": "Question", "name": "Does WordCare work offline?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scanning, text recognition, PDF tools and Office editing all run on your phone without internet." } },
+      { "@type": "Question", "name": "Are my documents uploaded anywhere?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Your files stay on your phone. Nothing is uploaded unless you turn on backup to your own Google Drive." } },
+      { "@type": "Question", "name": "Can WordCare scan both sides of an ID card onto one page?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Choose ID card in the scanner, scan the front and then the back, and WordCare puts both sides on one page at real card size." } },
+      { "@type": "Question", "name": "Can it scan a book?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Choose Book, photograph the open book, and WordCare splits the two facing pages into separate pages." } },
+      { "@type": "Question", "name": "Can I edit Word, Excel and PowerPoint files?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. WordCare opens and edits .docx, .xlsx and .pptx files, with formulas that calculate in spreadsheets and full-screen presenting for slides." } },
+      { "@type": "Question", "name": "Is there an iPhone version?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The iPhone version is coming soon to the App Store. The Android version is available on Google Play now." } }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #FAFAF7; --surface: #FFFFFF; --text: #0B1F4D; --muted: #4A5670;
-      --brand: #0351E7; --border: #E3E6EE;
+      --brand: #0351E7; --brand-ink: #FFFFFF; --border: #E3E6EE; --accent: #E8A33D;
+      --hero: #0B1F4D; --hero-text: #FFFFFF; --hero-muted: #C6D0E6;
     }
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #0E1320; --surface: #171E2F; --text: #EEF1F8; --muted: #A9B3C9;
-        --brand: #5B8CFF; --border: #26304A;
+        --brand: #5B8CFF; --brand-ink: #0B1020; --border: #26304A;
+        --hero: #111A31; --hero-text: #EEF1F8; --hero-muted: #A9B3C9;
       }
     }
     * { box-sizing: border-box; margin: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       background: var(--bg); color: var(--text); line-height: 1.55;
+      -webkit-text-size-adjust: 100%;
     }
-    main { max-width: 720px; margin: 0 auto; padding: 56px 16px 40px; }
-    header { display: flex; align-items: center; gap: 16px; }
-    header img { width: 72px; height: 72px; border-radius: 18px; }
-    h1 { font-size: 2.2rem; letter-spacing: -0.02em; }
-    .tagline { font-size: 1.25rem; margin-top: 24px; font-weight: 600; }
-    .lead { color: var(--muted); margin-top: 8px; }
+    a { color: var(--brand); }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+    nav.top { background: var(--hero); }
+    nav.top .wrap { display: flex; align-items: center; gap: 12px; height: 60px; }
+    nav.top .brand { display: flex; align-items: center; gap: 10px; color: var(--hero-text);
+      text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+    nav.top .brand img { width: 32px; height: 32px; border-radius: 8px; }
+    nav.top .links { margin-left: auto; display: flex; gap: 18px; }
+    nav.top .links a { color: var(--hero-muted); text-decoration: none; font-size: 0.95rem; }
+    nav.top .links a:hover { color: var(--hero-text); }
+    @media (max-width: 560px) { nav.top .links a.opt { display: none; } }
+
+    .hero { background: var(--hero); color: var(--hero-text); padding: 40px 0 56px; }
+    .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: center; }
+    .hero h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.15; letter-spacing: -0.02em; }
+    .hero .lead { color: var(--hero-muted); font-size: 1.12rem; margin-top: 16px; max-width: 36em; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; padding: 0; list-style: none; }
+    .chips li { border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 4px 12px;
+      font-size: 0.9rem; color: var(--hero-text); }
     .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .btn {
-      display: inline-block; padding: 12px 20px; border-radius: 999px;
-      background: var(--brand); color: #fff; text-decoration: none; font-weight: 600;
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px;
+      background: var(--accent); color: #1B1300; text-decoration: none; font-weight: 700; }
+    .btn:hover { filter: brightness(1.05); }
+    .soon { display: inline-flex; align-items: center; padding: 13px 22px; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.3); color: var(--hero-muted); }
+    .hero { overflow: hidden; }
+    .stage { display: flex; justify-content: center; align-items: flex-start; gap: 28px;
+      perspective: 1400px; padding: 12px 0 8px; }
+    .stage figure { margin: 0; width: 205px; text-align: center; }
+    .stage figcaption { margin-top: 18px; color: var(--hero-muted); font-size: 0.92rem; }
+    .phone3d { position: relative; border-radius: 34px; padding: 9px; background: #05080F;
+      box-shadow: 0 0 0 2px #2A3350, 0 40px 70px -10px rgba(0,0,0,0.6), 0 0 60px rgba(91,140,255,0.18);
+      transform-style: preserve-3d; animation: float 7s ease-in-out infinite;
+      transition: transform 0.6s ease; }
+    .phone3d video, .phone3d img { display: block; width: 100%; height: auto; border-radius: 26px;
+      background: #fff; aspect-ratio: 540 / 1068; }
+    .stage .left .phone3d { --tilt: rotateY(16deg) rotateX(5deg) rotateZ(-2deg); }
+    .stage .right .phone3d { --tilt: rotateY(-16deg) rotateX(5deg) rotateZ(2deg); animation-delay: -3.5s;
+      margin-top: 44px; }
+    .phone3d { transform: var(--tilt); }
+    .phone3d:hover { animation-play-state: paused; transform: rotateY(0) rotateX(0) scale(1.03); }
+    @keyframes float {
+      0%, 100% { transform: var(--tilt) translateY(0); }
+      50% { transform: var(--tilt) translateY(-12px); }
     }
-    .soon {
-      display: inline-block; padding: 12px 20px; border-radius: 999px;
-      border: 1px solid var(--border); color: var(--muted);
+    @media (prefers-reduced-motion: reduce) {
+      .phone3d { animation: none; }
     }
-    ul.features {
-      list-style: none; padding: 0; margin-top: 36px;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;
+    @media (max-width: 760px) {
+      .hero .wrap { grid-template-columns: 1fr; }
+      .stage { gap: 14px; }
+      .stage figure { width: 46%; max-width: 200px; }
+      .stage .right .phone3d { margin-top: 28px; }
+      .phone3d { border-radius: 24px; padding: 6px; }
+      .phone3d video, .phone3d img { border-radius: 19px; }
     }
-    ul.features li {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 14px; padding: 14px 16px;
-    }
-    ul.features b { display: block; }
-    ul.features span { color: var(--muted); font-size: 0.95rem; }
-    footer {
-      margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border);
-      color: var(--muted); font-size: 0.9rem;
-    }
-    footer a { color: var(--brand); }
+
+    section { padding: 56px 0 8px; }
+    h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); letter-spacing: -0.01em; }
+    .sub { color: var(--muted); margin-top: 8px; max-width: 44em; }
+
+    .shots { display: flex; gap: 14px; overflow-x: auto; padding: 20px 0 8px;
+      scroll-snap-type: x mandatory; }
+    .shots img { flex: 0 0 auto; width: 200px; height: auto; border-radius: 16px;
+      border: 1px solid var(--border); scroll-snap-align: start; align-self: flex-start; }
+
+    .groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 16px; margin-top: 24px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+    .card h3 { font-size: 1.1rem; }
+    .card p.k { color: var(--muted); font-size: 0.95rem; margin-top: 2px; }
+    .card ul { margin-top: 12px; padding-left: 1.1em; }
+    .card li { margin: 4px 0; }
+
+    .compare { margin-top: 24px; display: grid; gap: 12px; }
+    .compare .row { background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 16px 18px; }
+    .compare .row b { display: block; }
+    .compare .row span { color: var(--muted); }
+
+    .faq { margin-top: 20px; }
+    .faq details { background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 14px 18px; margin-bottom: 10px; }
+    .faq summary { cursor: pointer; font-weight: 600; }
+    .faq details p { margin-top: 8px; color: var(--muted); }
+
+    .langs { color: var(--muted); margin-top: 12px; }
+
+    .final { text-align: center; padding: 64px 0 24px; }
+    .final .cta { justify-content: center; }
+    .final .soon { color: var(--muted); border-color: var(--border); }
+
+    footer { margin-top: 40px; border-top: 1px solid var(--border); padding: 24px 0 40px;
+      color: var(--muted); font-size: 0.92rem; }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
   </style>
 </head>
 <body>
+  <nav class="top" aria-label="Main">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="icon.png" alt="">WordCare</a>
+      <div class="links">
+        <a class="opt" href="#features">Features</a>
+        <a class="opt" href="#compare">Compare</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Scan, sign and edit any document on your phone. Free.</h1>
+        <p class="lead">WordCare is a PDF editor, document scanner, Office suite and handwritten notebook in one app. It works offline, needs no account, and your files never leave your phone.</p>
+        <ul class="chips">
+          <li>Free</li><li>Works offline</li><li>No account</li><li>20 languages</li>
+        </ul>
+        <div class="cta">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.wordcare.app">Get it on Google Play</a>
+          <span class="soon">iPhone: coming soon</span>
+        </div>
+      </div>
+      <div class="stage" aria-label="WordCare in action">
+        <figure class="left">
+          <div class="phone3d">
+            <video autoplay muted loop playsinline preload="auto" poster="video/sign.jpg" width="540" height="1068"
+                   aria-label="Highlighting, circling and signing a rental agreement PDF in WordCare">
+              <source src="video/sign.mp4" type="video/mp4">
+            </video>
+          </div>
+          <figcaption>Mark up and sign a PDF</figcaption>
+        </figure>
+        <figure class="right">
+          <div class="phone3d">
+            <video autoplay muted loop playsinline preload="auto" poster="video/notes.jpg" width="540" height="1068"
+                   aria-label="Writing biology notes by hand and drawing a cell diagram in a WordCare notebook">
+              <source src="video/notes.mp4" type="video/mp4">
+            </video>
+          </div>
+          <figcaption>Write notes by hand</figcaption>
+        </figure>
+      </div>
+    </div>
+  </header>
+
   <main>
-    <header>
-      <img src="icon.png" alt="WordCare app icon">
-      <h1>WordCare</h1>
-    </header>
-
-    <p class="tagline">All your PDFs &amp; Word documents, right on your phone.</p>
-    <p class="lead">Read, edit, scan, sign, compress and convert documents — privately, on your device, with no account needed.</p>
-
-    <div class="cta">
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.wordcare.app">Get it on Google Play</a>
-      <span class="soon">iPhone version coming soon</span>
+    <div class="wrap">
+      <div class="shots" aria-label="Screenshots">
+        <img src="img/home.webp" width="480" height="949" loading="lazy" alt="WordCare home screen with quick actions: scan, scan to Word, handwrite, edit PDF, convert, merge, compress and sign">
+        <img src="img/scanmodes.webp" width="480" height="949" loading="lazy" alt="Scanner modes: document, ID card (front and back on one page) and book">
+        <img src="img/reader.webp" width="480" height="1038" loading="lazy" alt="Reading a PDF report in WordCare">
+        <img src="img/search.webp" width="480" height="1038" loading="lazy" alt="Searching inside a PDF with matches highlighted">
+        <img src="img/annotate.webp" width="480" height="1038" loading="lazy" alt="Drawing shapes and notes on a PDF">
+        <img src="img/sign.webp" width="480" height="1038" loading="lazy" alt="Signing a PDF document">
+        <img src="img/tools.webp" width="480" height="1038" loading="lazy" alt="PDF tools menu">
+      </div>
     </div>
 
-    <ul class="features">
-      <li><b>Open &amp; edit</b><span>PDFs and Word files</span></li>
-      <li><b>Scan</b><span>Paper documents to PDF</span></li>
-      <li><b>Sign</b><span>Forms without printing</span></li>
-      <li><b>Compress</b><span>Big files, share-ready</span></li>
-      <li><b>Convert</b><span>PDF &harr; Word</span></li>
-      <li><b>Private</b><span>Files stay on your phone</span></li>
-    </ul>
+    <section id="features">
+      <div class="wrap">
+        <h2>Everything you need for documents</h2>
+        <p class="sub">The tools many apps put behind a subscription are free in WordCare.</p>
+        <div class="groups">
+          <div class="card">
+            <h3>Scan</h3>
+            <p class="k">Document scanner with text recognition</p>
+            <ul>
+              <li>Automatic edge detection and clean-up filters</li>
+              <li><b>ID card mode:</b> front and back on one page, at real card size</li>
+              <li><b>Book mode:</b> one photo of an open book becomes two pages</li>
+              <li>Searchable scans: find, select and copy the text</li>
+              <li>Scan to Word: printed pages and handwriting to editable text</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>PDF</h3>
+            <p class="k">Read, sign and edit PDFs</p>
+            <ul>
+              <li>Sign documents and fill in PDF forms</li>
+              <li>Annotate with pen, highlighter, shapes and text</li>
+              <li>Merge, split, reorder, rotate and delete pages</li>
+              <li>Compress, watermark, page numbers, password lock</li>
+              <li>Redact: hidden text is really removed from the file</li>
+              <li>Convert PDF to and from Word, Excel, PowerPoint and images</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Office</h3>
+            <p class="k">Word, Excel and PowerPoint files</p>
+            <ul>
+              <li><b>Docs:</b> styles, lists, tables, pictures, headers, footers, comments</li>
+              <li><b>Sheets:</b> formulas that calculate, charts, filters, dropdowns</li>
+              <li><b>Slides:</b> layouts, themes, transitions, full-screen presenting</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Handwritten notes</h3>
+            <p class="k">Notebooks for school and work</p>
+            <ul>
+              <li>Pen, brush, marker and highlighter</li>
+              <li>Ruled, grid, dotted, Cornell, planner and music pages</li>
+              <li>Folders such as Studies › Chemistry, one notebook per topic</li>
+              <li>Turn handwriting into text, share as PDF</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Private by design</h3>
+            <p class="k">Your files stay yours</p>
+            <ul>
+              <li>No account needed for any feature</li>
+              <li>Files stay on your phone; nothing is uploaded</li>
+              <li>Optional backup to your own Google Drive</li>
+              <li>Lock single documents with fingerprint or PIN</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer>
+    <section id="compare">
+      <div class="wrap">
+        <h2>One free app instead of several</h2>
+        <p class="sub">If you use one of these apps today, WordCare covers the same job, and the others too.</p>
+        <div class="compare">
+          <div class="row"><b>Looking for a CamScanner or Adobe Scan alternative?</b>
+            <span>WordCare scans documents, ID cards (both sides on one page) and books into searchable PDFs, offline, with no account.</span></div>
+          <div class="row"><b>Looking for an Adobe Acrobat or Xodo alternative?</b>
+            <span>Sign, fill in, annotate, merge, compress, lock and redact PDFs, all included for free.</span></div>
+          <div class="row"><b>Looking for a Microsoft Office, WPS Office or Google Docs alternative?</b>
+            <span>Open and edit Word, Excel and PowerPoint files on your phone, even without internet.</span></div>
+          <div class="row"><b>Looking for a GoodNotes or Notability alternative on Android?</b>
+            <span>Write by hand in notebooks with page templates, keep them in folders and turn handwriting into text.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <h2>Questions</h2>
+        <div class="faq">
+          <details open><summary>Is WordCare free?</summary>
+            <p>Yes. Every feature is free, including merging, compressing, signing and locking PDFs, scanning and editing Office files. The free version shows a small ad; an optional one-time purchase removes it.</p></details>
+          <details><summary>Do I need an account?</summary>
+            <p>No. Everything works without signing in. Signing in with Google or Apple is optional and only used for backup to your own Google Drive.</p></details>
+          <details><summary>Does WordCare work offline?</summary>
+            <p>Yes. Scanning, text recognition, PDF tools and Office editing all run on your phone without internet.</p></details>
+          <details><summary>Are my documents uploaded anywhere?</summary>
+            <p>No. Your files stay on your phone. Nothing is uploaded unless you turn on backup to your own Google Drive.</p></details>
+          <details><summary>Can WordCare scan both sides of an ID card onto one page?</summary>
+            <p>Yes. Choose ID card in the scanner, scan the front and then the back, and WordCare puts both sides on one page at real card size.</p></details>
+          <details><summary>Can it scan a book?</summary>
+            <p>Yes. Choose Book, photograph the open book, and WordCare splits the two facing pages into separate pages.</p></details>
+          <details><summary>Can I edit Word, Excel and PowerPoint files?</summary>
+            <p>Yes. WordCare opens and edits .docx, .xlsx and .pptx files, with formulas that calculate in spreadsheets and full-screen presenting for slides.</p></details>
+          <details><summary>Is there an iPhone version?</summary>
+            <p>The iPhone version is coming soon to the App Store. The Android version is available on Google Play now.</p></details>
+        </div>
+        <p class="langs"><b>Languages:</b> English, Kiswahili, Luganda, Français, Español, Deutsch, Italiano, Português, Polski, Română, Українська, Русский, Türkçe, Tiếng Việt, हिन्दी, 中文, 日本語, 한국어, العربية, اردو.</p>
+      </div>
+    </section>
+
+    <div class="final wrap">
+      <h2>Get WordCare</h2>
+      <div class="cta">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.wordcare.app">Get it on Google Play</a>
+        <span class="soon">iPhone: coming soon</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2026 Justus Nuwagaba ·
+        <a href="mailto:wordcare26@gmail.com">wordcare26@gmail.com</a></p>
       <p>
         <a href="https://justusnuwagaba.github.io/wordcare-legal/privacy.html">Privacy policy</a> ·
         <a href="https://justusnuwagaba.github.io/wordcare-legal/terms.html">Terms</a>
       </p>
-      <p>© 2026 Justus Nuwagaba</p>
-    </footer>
-  </main>
+    </div>
+  </footer>
+  <script>
+    if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.querySelectorAll("video").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); v.controls = true; });
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+# WordCare
+
+> WordCare is a free all-in-one document app for Android (iPhone coming soon): a document, ID card and book scanner with text recognition, a PDF editor, a Word/Excel/PowerPoint editor and handwritten notebooks. It works offline, needs no account, and keeps files on the user's phone.
+
+## Facts
+- Price: free, ad-supported; an optional one-time purchase removes ads
+- Platforms: Android (Google Play); iPhone version coming soon
+- Account: not required; optional Sign in with Google or Apple for backup to the user's own Google Drive
+- Offline: yes; scanning, OCR, PDF tools and Office editing run on the device
+- Languages: 20, including English, Swahili, Luganda, French, Spanish, Arabic, Urdu, Hindi, Portuguese and Chinese
+- Developer: Justus Nuwagaba (wordcare26@gmail.com)
+
+## Features
+- Scan: automatic edges and filters; ID card mode puts front and back on one page at card size; book mode splits an open book into two pages; searchable scans; scan to Word
+- PDF: sign, fill forms, annotate, merge, split, reorder, rotate, compress, watermark, page numbers, password lock, true redaction, convert to and from Word, Excel, PowerPoint and images
+- Office: edit .docx, .xlsx (formulas, charts, filters, dropdowns) and .pptx (themes, transitions, presenting)
+- Notes: handwritten notebooks and sticky notes, page templates, folders, handwriting to text, share as PDF
+- Privacy: files stay on the phone; per-document fingerprint/PIN lock
+
+## Good alternative to
+CamScanner, Adobe Scan, Microsoft Lens, Adobe Acrobat Reader, Xodo, Microsoft Office mobile, WPS Office, Google Docs/Sheets/Slides, GoodNotes, Notability
+
+## Links
+- Website: https://justusnuwagaba.github.io/
+- Google Play: https://play.google.com/store/apps/details?id=com.wordcare.app
+- Privacy policy: https://justusnuwagaba.github.io/wordcare-legal/privacy.html

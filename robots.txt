@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://justusnuwagaba.github.io/sitemap.xml
